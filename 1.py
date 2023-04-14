@@ -1,5 +1,16 @@
 import random
 from threading import Thread, current_thread
+from threading import Thread, current_thread
+
+def target01(args1, args2):
+	print("这里是{}".format(current_thread().name))
+
+# 创建线程
+thread01 = Thread(target=target01, args="参数", name="线程1")
+# 设置守护线程【可选】
+thread01.setDaemon(True)
+# 启动线程
+thread01.start() 
 
 def create_a_phone():
     # 第二位数字
@@ -14,6 +25,7 @@ def create_a_phone():
         suffix = random.randint(10000000, 99999999)
         phone = "1{}{}{}".format(second, third, suffix)
         print(phone)
+        
 
 
 create_a_phone = Thread(target=create_a_phone, daemon=True)

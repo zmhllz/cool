@@ -15,10 +15,10 @@ from Crypto import Random
 import glob
 from urllib.parse import urljoin
 
-headers = {
-    "X-Access-Token": "",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
-}
+# headers = {
+#     "X-Access-Token": "",
+#     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36"
+# }
 def download(url, path, name): 
 
     res = requests.get(url)
@@ -80,5 +80,6 @@ def cool_api(parentId, pe):
             print('成功')
 if __name__ == '__main__':
     cool_api(0, r'路径')
+    print('66')
     
 
